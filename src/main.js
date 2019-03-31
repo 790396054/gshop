@@ -3,10 +3,11 @@
  */
 import Vue from 'vue'
 import App from './App'
-import router from 'router'
+import router from './router'
 
+/* eslint-disable */
 new Vue({
-  el: "#app",
+  el: '#app',
   render: h => h(App),
   router
 })

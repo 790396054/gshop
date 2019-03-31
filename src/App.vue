@@ -1,27 +1,20 @@
 <template>
   <div>
     <router-view/>
-    <FooterGuide/>
+    <FooterGuide v-show="$route.meta.showFooter"/>
   </div>
 </template>
 
 <script>
-  import FooterGuide from './components/FooterGuide/FooterGuide'
+import FooterGuide from './components/FooterGuide/FooterGuide'
 
-  export default {
-    data () {
-      return {
-
-      }
-    },
-    components: {
-      FooterGuide
-    }
-
+export default {
+  components: {
+    FooterGuide
   }
+}
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  .app
-    color: red
+
 </style>
