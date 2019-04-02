@@ -12,12 +12,13 @@ export default {
   mounted () {
     // this.$store.dispatch('getAddress')
     this.getAddress()
+    this.getCategorys()
   },
   components: {
     FooterGuide
   },
   methods: {
-    ...mapActions(['getAddress'])
+    ...mapActions(['getAddress','getCategorys'])
   }
 }
 </script>
