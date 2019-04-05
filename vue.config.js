@@ -2,7 +2,7 @@ module.exports = {
   //  代理相关配置
   devServer: {
     host: 'localhost',
-    port: 8080,
+    port: 8081,
     https: false,
     hotOnly: false,
     proxy: {

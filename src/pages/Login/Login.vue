@@ -41,7 +41,8 @@
               </section>
               <section class="login_message">
                 <input type="text" maxlength="11" placeholder="验证码" v-model="captcha">
-                <img class="get_verification" src="./images/captcha.svg" alt="captcha">
+                <img class="get_verification" src="http://localhost:4000/captcha" alt="captcha"
+                  @click="getCaptcha">
               </section>
             </section>
           </div>
@@ -129,6 +130,11 @@
             this.showAlert('验证码必须指定')
             return
           }
+
+          // 将 user 数据保存到 vuex 中
+
+          // 去个人中心界面
+          this.$router.replace("/profile")
         }
       },
       // 关闭警告框
@@ -136,6 +142,9 @@
         this.alertShow = false
         this.alertText = ''
       },
+      getCaptcha (event) {
+        event.target.src = "http://localhost:4000/captcha?time=" + Date.now()
+      }
     },
     components: {
       AlertTip
